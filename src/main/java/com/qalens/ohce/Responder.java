@@ -7,6 +7,11 @@ public class Responder {
         this.line = line;
     }
     public String response(){
-        return new StringBuilder(line).reverse().toString();
+        String reverse = new StringBuilder(line).reverse().toString();
+        String message=reverse;
+        if(line.equals(reverse)){
+            message = message+"\n¡Bonita palabra!";
+        }
+        return message;
     }
 }

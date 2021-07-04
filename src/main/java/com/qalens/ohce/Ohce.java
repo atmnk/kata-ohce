@@ -13,8 +13,14 @@ public class Ohce {
         System.out.println(greeter.getGreetingFor(name));
         String line = "";
         Scanner scanner = new Scanner(System.in);
-        while (!line.equals("Stop!")){
+        while (true){
             line = scanner.nextLine();
+            if(!line.equals("Stop!")){
+                Responder responder=new Responder(line);
+                System.out.println(responder.response());
+            } else {
+                break;
+            }
         }
         System.out.println("Adios "+name);
     }

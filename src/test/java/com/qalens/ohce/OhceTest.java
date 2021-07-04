@@ -25,7 +25,7 @@ public class OhceTest {
         System.setIn(new ByteArrayInputStream("hola\nStop!".getBytes(StandardCharsets.UTF_8)));
         Calendar calendar=new Calendar.Builder().setTimeOfDay(13,0,0).build();
         Ohce.run(calendar,"Atmaram");
-        Assertions.assertEquals("¡Buenas tardes Atmaram!\nolah\nAdios Atmaram\n",new String(baos.toByteArray()));
+        Assertions.assertEquals("¡Buenas tardes Atmaram!\naloh\nAdios Atmaram\n",new String(baos.toByteArray()));
     }
     @AfterEach
     public void resetIO(){

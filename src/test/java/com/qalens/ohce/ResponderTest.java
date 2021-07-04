@@ -9,4 +9,9 @@ public class ResponderTest {
         Responder responder=new Responder("hola");
         Assertions.assertEquals("aloh",responder.response());
     }
+    @Test
+    public void shouldResponseReverseAndMEssageForPalindromeOfString(){
+        Responder responder=new Responder("oto");
+        Assertions.assertEquals("oto\n¡Bonita palabra!",responder.response());
+    }
 }

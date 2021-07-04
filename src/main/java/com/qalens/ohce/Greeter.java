@@ -9,6 +9,10 @@ public class Greeter {
         this.hour = hour;
     }
     public String getGreetingFor(String name){
-        return name;
+        String greeting="";
+        if (hour >= 20 || hour <= 6) {
+            greeting = "¡Buenas noches " + name;
+        }
+        return greeting;
     }
 }

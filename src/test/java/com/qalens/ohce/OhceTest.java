@@ -24,7 +24,7 @@ public class OhceTest {
         System.setIn(new ByteArrayInputStream("Stop!".getBytes(StandardCharsets.UTF_8)));
         String[] args = {"Atmaram"};
         Ohce.main(args);
-        Assertions.assertEquals("¡Buenos días Pedro!\nAdios Atmaram\n",new String(baos.toByteArray()));
+        Assertions.assertEquals("¡Buenos días Atmaram!\nAdios Atmaram\n",new String(baos.toByteArray()));
     }
     @AfterEach
     public void resetIO(){

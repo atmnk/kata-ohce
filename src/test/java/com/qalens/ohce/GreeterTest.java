@@ -24,4 +24,13 @@ public class GreeterTest {
         Greeter greeter=new Greeter(hour);
         Assertions.assertEquals(expected,greeter.getGreetingFor(name));
     }
+    @ParameterizedTest
+    @CsvSource({
+            "Atmaram,13,¡Buenas tardes Atmaram",
+            "Naik,19,¡Buenas tardes Naik",
+            "Yogesh,16,¡Buenas tardes Yogesh"})
+    public void shouldGreettardesBetween12To20(String name, int hour, String expected){
+        Greeter greeter=new Greeter(hour);
+        Assertions.assertEquals(expected,greeter.getGreetingFor(name));
+    }
 }

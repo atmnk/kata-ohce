@@ -11,11 +11,11 @@ public class Greeter {
     public String getGreetingFor(String name){
         String greeting="";
         if (hour >= 20 || hour <= 6) {
-            greeting = "¡Buenas noches " + name;
+            greeting = "¡Buenas noches " + name+"!";
         } else if (hour > 6 && hour < 12) {
-            greeting = "¡Buenos días " + name;
+            greeting = "¡Buenos días " + name+"!";
         } else {
-            greeting = "¡Buenas tardes " + name;
+            greeting = "¡Buenas tardes " + name+"!";
         }
         return greeting;
     }

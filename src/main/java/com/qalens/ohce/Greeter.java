@@ -12,6 +12,8 @@ public class Greeter {
         String greeting="";
         if (hour >= 20 || hour <= 6) {
             greeting = "¡Buenas noches " + name;
+        } else if (hour > 6 && hour < 12) {
+            greeting = "¡Buenos días " + name;
         }
         return greeting;
     }

@@ -7,6 +7,6 @@ public class Responder {
         this.line = line;
     }
     public String response(){
-        return "";
+        return new StringBuilder(line).reverse().toString();
     }
 }

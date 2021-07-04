@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
+import java.util.Calendar;
 
 
 public class OhceTest {
@@ -22,8 +23,8 @@ public class OhceTest {
     @Test
     public void shouldGreetAndStop(){
         System.setIn(new ByteArrayInputStream("Stop!".getBytes(StandardCharsets.UTF_8)));
-        String[] args = {"Atmaram"};
-        Ohce.main(args);
+        Calendar calendar=new Calendar.Builder().setTimeOfDay(13,0,0).build();
+        Ohce.run(calendar,"Atmaram");
         Assertions.assertEquals("¡Buenas tardes Atmaram!\nAdios Atmaram\n",new String(baos.toByteArray()));
     }
     @AfterEach

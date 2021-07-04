@@ -14,6 +14,8 @@ public class Greeter {
             greeting = "¡Buenas noches " + name;
         } else if (hour > 6 && hour < 12) {
             greeting = "¡Buenos días " + name;
+        } else {
+            greeting = "¡Buenas tardes " + name;
         }
         return greeting;
     }
